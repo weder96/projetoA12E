@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Playing a local video</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<style>
+html, body {
+	background: black;
+	color: white;
+}
+html, body, video {
+	padding: 0;
+	margin: 0;
+}
+video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+.videosubbar {
+	position: absolute;
+	bottom: 1em;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: transparent; /* rgba(0, 0, 0, 0.125); */
+	color: #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 6vh;
+	line-height: normal;
+	font-weight: bold;
+	text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+	pointer-events: none;
+}
+.videosubbar span {
+	background-color: rgba(0, 0, 0, 0.25);
+	padding: 0.0625em 0.25em;
+	display: inline-block;
+}
+</style>
+<script>
+// The code below is a highly modified version of:
+// VideoSub v0.9.9
+// by Thomas Sturm, June 2010 - August 2012
+// http://www.storiesinflight.com
+// License MIT
+// https://github.com/thomassturm/VideoSub
+
+window.addEventListener('load', videosub_main);
+
+function videosub_timecode_min(tc) {
+	tcpair = tc.split(' --> ');
+	return videosub_tcsecs(tcpair[0]);
+}
+
+function videosub_timecode_max(tc) {
+	tcpair = tc.split(' --> ');
+	return videosub_tcsecs(tcpair[1]);
+}
+
+function videosub_tcsecs(tc) {
+	tc1 = tc.split(',');
+	tc2 = tc1[0].split(':');
+	secs = Math.floor(tc2[0]*60*60) + Math.floor(tc2[1]*60) + Math.floor(tc2[2]);
+	return secs;
+}
+
+function videosub_main() {
+	// detect media element track support in browser via the existence of the addtrack method
+	var myVideo = document.getElementsByTagName('video')[0];
+	var tracksupport = typeof myVideo.addTextTrack == "function" ? true : false;	// check for track element method, if it doesn't exist, the browser generally doesn't support track elements
+
+	// first find all video tags
+	Array.prototype.map.call(
+		document.querySelectorAll('video'),
+		function(el) {
+			var subcontainer = document.createElement("div");
+			subcontainer.classList.add('videosubbar');
+			el.parentNode.appendChild(subcontainer);
+
+			var subcontainerspan = document.createElement("span");
+			subcontainer.appendChild(subcontainerspan);
+			el.subcontainer = subcontainerspan;
+
+			// called on AJAX load onComplete (to work around element reference issues)
+			el.update = function(req) {
+				el.subtitles = new Array();
+				records = req.replace('\r', '').split('\n\n');
+				for (var r=0;r<records.length;r++) {
+					record = records[r];
+					el.subtitles[r] = new Array();
+					el.subtitles[r] = record.split('\n');
+				}
+			}
+
+			// load the subtitle file
+			el.update(document.getElementById('subtitle').innerHTML.trim());
+
+			el.subcount = 0;
+
+			// add event handler to be called when play button is pressed
+			el.addEventListener('play', function(an_event){
+				el.subcount = 0;
+			});
+
+			// add event handler to be called when video is done
+			el.addEventListener('ended', function(an_event){
+				el.subcount = 0;
+			});
+
+			// add event handler to be called when the video timecode has jumped
+			el.addEventListener('seeked', function(an_event){
+				el.subcount = 0;
+				while (videosub_timecode_max(el.subtitles[el.subcount][1]) < this.currentTime.toFixed(1)) {
+					el.subcount++;
+					if (el.subcount > el.subtitles.length-1) {
+						el.subcount = el.subtitles.length-1;
+						break;
+					}
+				}
+			});
+
+			// add event handler to be called while video is playing
+			el.addEventListener('timeupdate', function(an_event){
+				var subtitle = '';
+				// check if the next subtitle is in the current time range
+				if (this.currentTime.toFixed(1) > videosub_timecode_min(el.subtitles[el.subcount][1])  &&  this.currentTime.toFixed(1) < videosub_timecode_max(el.subtitles[el.subcount][1])) {
+					subtitle = el.subtitles[el.subcount].slice(2).join('<br>');
+				}
+				// is there a next timecode?
+				if (this.currentTime.toFixed(1) > videosub_timecode_max(el.subtitles[el.subcount][1])  && el.subcount < (el.subtitles.length-1)) {
+					el.subcount++;
+				}
+				// update subtitle div
+				if(this.subcontainer.innerHTML != subtitle){
+					this.subcontainer.innerHTML = subtitle;
+				}
+			});
+
+	});
+}
+</script>
+</head>
+<body>
+
+<video controls>
+<source src="file://C:\Users\weder\Desktop\gpbl\play.mp4" type="video/mp4">
+<!-- Chrome does not allow reading subtitle files from file:// -->
+<!--track label="English" kind="subtitles" srclang="en" src="Your local subtitle cannot be loaded.vtt" default-->
+</video>
+
+<script type="text/srt" id="subtitle">
+1
+00:00:02,500 --> 00:00:05,250
+Instead of loading an external .vtt file,
+
+2
+00:00:05,250 --> 00:00:09,750
+The workaround is to embed the .srt file
+contents inside a script tag.
+
+3
+00:00:10,001 --> 00:00:12,411
+This implementation is quick and dirty
+
+4
+00:00:12,411 --> 00:00:16,750
+and uses .innerHTML
+instead of anything safer.
+
+5
+00:00:16,411 --> 00:00:24,750
+testes sides
+ghglhglghghjghjghj.
+
+</script>
+
+</body>
+</html>
