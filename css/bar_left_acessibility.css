@@ -1,0 +1,37 @@
+#font-acess {
+    position: fixed;
+    right: 0;
+    top: 9%;
+    z-index: 1000;
+}
+
+#font-acess button {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px !important;
+    color: #FFF;
+    background: #000000;
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+#font-acess a {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px !important;
+    color: #FFF;
+    background: #000000;
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+body.contraste button {
+    color: #9F0 !important;
+    font-weight: bold;
+}

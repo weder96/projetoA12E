@@ -5,16 +5,16 @@
   <head>
 
     <!-- META -->
-      <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
       <meta name="DC.title" content="Site Modelo - Acessibilidade Virtual" />
       <meta name="DC.creator" content="Projeto de Acessibilidade Virtual" />
       <meta name="DC.creator.address" content="IFRS - Campus Bento Gonçalves, Av, Osvaldo Aranha, 540, Bento Gonçalves, RS – 95700-000, Fone: (54) 3455-3219 " />
       <meta name="DC.subject" content="Acessibilidade Virtual" />
 
-      <meta name="DC.description" content="Site modelo de acessibilidade desenvolvido pelo Projeto de Acessibilidade Virtual" />
+      <meta name="DC.description" content="Site modelo de acessibilidade desenvolvido pelo grupoA inMidias com base no Projeto de Acessibilidade Virtual" />
 
-      <meta name="author" content="Projeto de Acessibilidade Virtual" />
+      <meta name="author" content="Grupo A anapolis InMidias" />
       <meta name="language" content="pt-br" />
       <meta name="classification" content="Internet" />
       <meta name="robots" content="index, follow" />
@@ -27,6 +27,7 @@
       <meta name="distribution" content="Global" />
       <meta name="revisit-after" content="7 day" />
       <meta name="keywords" content="Acessibilidade, Portal Modelo, Site Modelo, e-MAG, PAV, Acessibilidade Virtual, Acessibilidade Web, Tecnologia Assistiva, Pedagógico, Manuais, Projetos, IFRS, IFCE, IFBAIANO" />
+      <meta name="keywords" content="Acesibilidade immidias projetoA12e" />
 
     <!-- TITLE -->
       <link rel="shortcut icon" href="images/favicon.ico" type="img/x-icon" />
@@ -38,6 +39,7 @@
       <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/contraste.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/docs.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/bar_left_acessibility.css" type="text/css" media="screen" />
       <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300'  type='text/css' media="screen" />
 
     <!-- JS -->
@@ -61,41 +63,23 @@
   
   <body>
     <!-- barra de acessibilidade -->
-    <div id="panel">
+   <div id="panel">
       <div class="navbar navbar-inverse navbar-fixed-top" id="advanced" style="margin-top: 0px; position: relative; ">
-        <span class="trigger">
-          <strong></strong>
-          <em></em>
-        </span>
 
-        <div class="navbar-inner">
-          <div class="container">
-            <div class="nav-collapse collapse nav-top-collapse">
-              <ul class="nav">
-                <li class="">
-                  <a accesskey="1" href="#conteudo_ref" id="link-conteudo"> Ir para o conte&uacute;do <span>(1)</span> </a>
-                </li>
-                <li class="">
-                  <a accesskey="2" href="#menu_ref" id="link-navegacao"> Ir para a navega&ccedil;&atilde;o <span>(2)</span> </a>
-                </li>
 
-                <li class="divider-vertical"></li>
-                
-                <li class="">
-                  <a accesskey="4" href="acessibilidade.html">Acessibilidade <span>(4)</span></a>
-                </li>
-                <li class="">
-                  <a accesskey="5" href="#" id="contraste">Alto Contraste <span>(5)</span></a>
-                </li>
-                <li>
-                  <a accesskey="6" href="mapa-do-site.html">Mapa do Site <span>(6)</span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <div id="font-acess" style="z-index:1000">
+            <button id="aMais" onclick="mudaFonte('mais'); return false" title="Aumentar Fonte">A+</button>
+            <button id="aMenos2" onclick="mudaFonte('normal'); return false" title="Fonte normal">A</button>
+            <button id="aMenos3" onclick="mudaFonte('menos'); return false" title="Diminuir Fonte">A-</button>           
+            <a accesskey="1" href="#conteudo_ref" id="link-conteudo" title="Ir para o conteúdo">1</a>
+            <a accesskey="2" href="#menu_ref" id="link-navegacao" title="Ir para o menu">2</a>
+            <a accesskey="3" href="#afooter" id="link-rodape" title="Ir para o rodapé">3</a>
+            <a accesskey="4" href="acessibilidade.html" id="link-rodape" title="Ir para acessibilidade">4</a>
+            <a accesskey="5" href="#" id="contraste" title="Contraste">5</a>
+            <a accesskey="6" href="mapa-do-site.html" id="link-rodape" title="Mapa do Site">6</a>
+	      </div>
       </div>
-    </div>
+    </div> 
 
     <!-- header -->
     <header>
@@ -137,7 +121,7 @@
       </div>
     </header>
 
-    <div class="bg-content"> 
+    <div class="bg-content" id="txt_home"> 
       
       <!-- content -->
       <a id="conteudo_ref" href="#conteudo_ref" class="menu_access_ref">In&iacute;cio do Conte&uacute;do</a>
