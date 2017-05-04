@@ -3,8 +3,6 @@ var tam = 15;
 var tam2=20;
 var testeContraste=0;
 function mudaFonte(tipo,elemento){
-	
-	
 	if (tipo=="mais") {
 		if(tam<21) 
 			tam+=1;
@@ -58,16 +56,11 @@ function readCookie(name) {
 	return null;
 }
 
-
-
 function eraseCookie(name)
 {
 createCookie(name,'',-1); 
 console.log(name);
 } 
-
-
-
 
 // Atalhos
 function gotoConteudo(){
