@@ -1,6 +1,9 @@
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
-var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+var SpeechRecognition = webkitSpeechRecognition || SpeechRecognition;
+var SpeechGrammarList = webkitSpeechGrammarList || SpeechGrammarList;
+var SpeechRecognitionEvent = SpeechRecognitionEvent|| SpeechRecognitionEvent;
+
+//if(typeof webkitSpeechRecognitionEvent !== undefined) 
+//var SpeechRecognitionEvent =  webkitSpeechRecognitionEvent  ;
 
 var phrases = [
   'i love to sing because it\'s fun',

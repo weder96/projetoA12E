@@ -31,7 +31,48 @@
     display: block;
 }
 
+#font-acess a:HOVER {
+	background: #FF0000;
+	text-decoration: none !important;
+}
+
+#font-acess button:HOVER {
+	background: #FF0000;
+	text-decoration: none !important;
+}
+
+.botaotopo {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    z-index: 1000;
+}
+
+#move-to-top {
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 15px 15px 15px 15px;
+    width: 25px !important;
+    height: 20px !important;;
+    z-index: 1000 !important;
+    background: #000000;
+    text-align: center;
+    border: none;
+    display: block;
+}
+
+.container{
+  z-index: -1 !important;
+}
+
+#move-to-top:HOVER {
+	background: #FF0000;
+	text-decoration: none !important;
+}
+
 body.contraste button {
     color: #9F0 !important;
     font-weight: bold;
 }
+

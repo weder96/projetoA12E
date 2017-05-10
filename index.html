@@ -22,8 +22,8 @@
       <meta name="copyright" content="" />
       <meta name="doc-rights" content="Public" />
 
-      <meta name="geo.region" content="RS"/>
-      <meta name="geo.placename" content="Bento Gon&ccedil;alves" />
+      <meta name="geo.region" content="GO"/>
+      <meta name="geo.placename" content="Anápolis" />
       <meta name="distribution" content="Global" />
       <meta name="revisit-after" content="7 day" />
       <meta name="keywords" content="Acessibilidade, Portal Modelo, Site Modelo, e-MAG, PAV, Acessibilidade Virtual, Acessibilidade Web, Tecnologia Assistiva, Pedagógico, Manuais, Projetos, IFRS, IFCE, IFBAIANO" />
@@ -40,6 +40,8 @@
       <link rel="stylesheet" href="css/contraste.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/docs.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/bar_left_acessibility.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css_font/font-awesome.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css_font/font-awesome.min.css" type="text/css" media="screen" />
       <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300'  type='text/css' media="screen" />
 
     <!-- JS -->
@@ -47,7 +49,13 @@
       <script type="text/javascript" src="js/jquery.cookie.js"></script>    
       <script type="text/javascript" src="js/bootstrap.js"></script>
       <script type="text/javascript" src="js/jquery.hotkeys-1.4.2.min.js"></script>
-      <script type="text/javascript" src="js/acessibilidade.js"></script>
+      <script type="text/javascript" src="js/acessibilidade.js"></script>  
+      <script src="development/source/artyom.js"></script>
+      <script src="development/source/artyomCommands.js"></script>
+      <script src="development/source/sandbox-scripts.js"></script>    
+
+
+
 
   	<!--[if (gt IE 9)|!(IE)]><!-->
   	<!--<![endif]-->
@@ -73,7 +81,7 @@
             <button id="aMenos3" onclick="mudaFonte('menos'); return false" title="Diminuir Fonte">A-</button>           
             <a accesskey="1" href="#conteudo_ref" id="link-conteudo" title="Ir para o conteúdo">1</a>
             <a accesskey="2" href="#menu_ref" id="link-navegacao" title="Ir para o menu">2</a>
-            <a accesskey="3" href="#afooter" id="link-rodape" title="Ir para o rodapé">3</a>
+            <a accesskey="3" href="#rodape_ref" id="link-rodape" title="Ir para o rodapé">3</a>
             <a accesskey="4" href="acessibilidade.html" id="link-rodape" title="Ir para acessibilidade">4</a>
             <a accesskey="5" href="#" id="contraste" title="Contraste">5</a>
             <a accesskey="6" href="mapa-do-site.html" id="link-rodape" title="Mapa do Site">6</a>
@@ -119,6 +127,7 @@
           </div>
         </div>
       </div>
+
     </header>
 
 
@@ -350,8 +359,13 @@
         </div>
       </div>
       <a id="finalconteudo_ref" href="#finalconteudo_ref" class="menu_access_ref">Final do Conte&uacute;do</a>
+     
+     <a class="botaotopo" href="#menu_ref" title="Ir Para o topo !">
+					<div id="move-to-top" class="animate filling">
+            <i class="fa fa-angle-double-up fa-2x"></i>
+         </div>
+	  	</a>
 
-      <a href="#menu_ref" class="bt_voltar_topo">Voltar ao topo</a>
     </div>
 
     <!-- footer -->
