@@ -22,7 +22,7 @@
         {
             indexes: ['Olá'],
             action : function(i){
-                artyom.say("Ola, Meu nome e Artyon.",{
+                artyom.say("Ola, Meu nome e Midiativo.",{
                     onStart: function(){
                         console.log("Speaking presentation");
                     },
@@ -47,8 +47,8 @@
             action : function(i){
                 artyom.say("apagar",{
                     onStart: function(){
-                        alert('apager');
-                        console.log("apagar");
+                         selecionaContraste(); 
+                         return false;
                     },
                     onEnd: function(){
                         console.log("All that i've to say has been said.");
@@ -62,8 +62,9 @@
             action : function(i){
                 artyom.say("acender",{
                     onStart: function(){
-                        alert('acender');
-                        console.log("acender");
+                        selecionaContraste(); 
+                          console.log("acender");
+                         return false;
                     },
                     onEnd: function(){
                         console.log("All that i've to say has been said.");
@@ -78,7 +79,7 @@
             action : function(i){
                 artyom.say("topo",{
                     onStart: function(){
-                        alert('topo');
+                       // alert('topo');
                         console.log("topo");
                     },
                     onEnd: function(){
@@ -87,22 +88,6 @@
                 });
             }
         }
-        ,
-         //Continue adding your own commands here
-        {
-          indexes: ['menu'],
-            action : function(i){
-                artyom.say("menu",{
-                    onStart: function(){
-                        alert('menu');
-                        console.log("menu");
-                    },
-                    onEnd: function(){
-                        console.log("All that i've to say has been said.");
-                    }
-                });
-            }
-        }       
     ];
 
     artyom.addCommands(artyomCommands);
@@ -111,14 +96,49 @@
      * Or use the shorter and cleaner method :
      */
 
+
+   artyom.on(['início']).then(function(i){
+        artyom.say("inicio");
+           window.location.assign("index.html")   
+             return false;
+    });
+
+      artyom.on(['aumentar']).then(function(i){
+        artyom.say("aumentar");
+        mudaFonte('mais'); return false;
+    });
+
+       artyom.on(['normal']).then(function(i){
+        artyom.say("normal");
+        mudaFonte('normal'); return false;
+    });
+
+
+       artyom.on(['diminuir']).then(function(i){
+        artyom.say("diminuir");
+        mudaFonte('menos'); return false;
+    });
+
     artyom.on(['rodapé']).then(function(i){
         artyom.say("rodapé");
          alert('rodapé');
+          window.location.assign("#rodape_ref");
+        return false;
+    });
+
+
+   artyom.on(['topo']).then(function(i){
+        artyom.say("topo");
+        // alert('topo');
+        window.location.assign("#menu_ref");
+        return false;
     });
 
     artyom.on(['conteúdo']).then(function(i){
         artyom.say("conteúdo");
-         alert('conteúdo');
+         //alert('conteúdo');
+        window.location.assign("#conteudo_ref");
+        return false;
     });
 
       artyom.on(['acessibilidade']).then(function(i){
@@ -127,19 +147,62 @@
              return false;
     });
 
+    artyom.on(['quem somos']).then(function(i){
+        artyom.say("quemsomos");
+           window.location.assign("quem-somos.html")   
+             return false;
+    });
 
+
+    artyom.on(['notícias']).then(function(i){
+        artyom.say("noticias");
+           window.location.assign("noticias.html")   
+             return false;
+    });
+
+    artyom.on(['manuais']).then(function(i){
+        artyom.say("manuais");
+           window.location.assign("manuais.html")   
+             return false;
+    });
+
+   artyom.on(['cursos']).then(function(i){
+        artyom.say("cursos");
+           window.location.assign("cursos.html")   
+             return false;
+    });
+
+
+artyom.on(['projetos']).then(function(i){
+        artyom.say("projetos");
+           window.location.assign("projetos.html")   
+             return false;
+    });
+
+
+    artyom.on(['publicações']).then(function(i){
+        artyom.say("publicacoes");
+           window.location.assign("publicacoes.html")   
+             return false;
+    });
+
+    artyom.on(['contato']).then(function(i){
+        artyom.say("contato");
+           window.location.assign("contato.html")   
+             return false;
+    });
     artyom.on(['Clean the panel']).then(() => {
         $("#log-panel").empty();
     });
 
-    artyom.on(['Repeat after me *'] , true).then(function(i, wildcard){
-        artyom.say(wildcard);
-    });
+   // artyom.on(['Repeat after me *'] , true).then(function(i, wildcard){
+     //   artyom.say(wildcard);
+    //});
 
     // Matches "regular expressions" case insensitive
-    artyom.on([/regular expressions/i], true).then(function(){
-        artyom.say("The usage of regular expressions is allowed in the smart commands");
-    });
+   // artyom.on([/regular expressions/i], true).then(function(){
+     //   artyom.say("The usage of regular expressions is allowed in the smart commands");
+   // });
 
     console.log(artyom.getAvailableCommands());
 })(window);
