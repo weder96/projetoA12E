@@ -95,7 +95,10 @@
     /**
      * Or use the shorter and cleaner method :
      */
-
+     artyom.on(['obrigado']).then(function(i){
+         alert("teste");
+        artyom.say("Por nada estou aqui para te auxiliar");
+    });
 
    artyom.on(['início']).then(function(i){
         artyom.say("inicio");

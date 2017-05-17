@@ -164,7 +164,7 @@ p.breadCrumb a:hover {
 .nav-collapse_ .nav > li > a:hover,
 .nav-collapse_ .nav > li.active > a,
 .nav-collapse_ .nav > li.active > a:hover {
-  background:#5A7610;
+  background:rgba(70,171,253,1);
   color: #ffffff;
   box-shadow: none;
   border-bottom: solid 6px #88A43F;
@@ -201,7 +201,7 @@ p.breadCrumb a:hover {
 .nav-collapse_ .nav > li > ul li.sfHover > a {
   text-decoration: none;
   color: #ffffff;
-  background: #5A7610;
+  background: rgba(70,171,253,1);
 }
 .nav-collapse_ .nav ul .sf-sub-indicator {
   display: none;
@@ -337,7 +337,7 @@ p {
   z-index: 4 !important;
 }
 .bg-content {
-  background: url(../img/bg-content.jpg) 50% 50%;
+  background: rgba(38,145,201,1) 50% 50%;
 }
 .block-slogan {
   overflow: hidden;
@@ -934,7 +934,7 @@ p {
 
 /*----------- buttons & links--------------*/
 .btn-1 {
-  background: #8AB616;
+  background: rgba(70,171,253,1);
   padding: 10px 40px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1199,7 +1199,7 @@ footer {
   .navbar_ .btn {
     display: inline-block;
     float: left;
-    background: #5A7610;
+    background: rgba(70,171,253,1);
     padding: 18px 0 20px;
     text-decoration: none;
     margin: 0;
@@ -1221,7 +1221,7 @@ footer {
     margin-left: 30px;
   }
   .navbar_ .btn:hover {
-    background: #72941B;
+    background: rgba(70,171,253,1);
     color: #ffffff;
   }
   .navbar_ .btn .icon-bar {
@@ -1244,7 +1244,7 @@ footer {
     zoom: 1;
     z-index: 50;
     width: 113px;
-    background:url("../img/bg-content.jpg") repeat scroll 50% 50% transparent;
+    background: rgba(70,171,253,1) repeat scroll 50% 50% transparent;
     padding: 12px 0;
     margin: 0;
     -webkit-border-radius: 0;
