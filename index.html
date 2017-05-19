@@ -34,8 +34,9 @@
       <title>Site Modelo - Grupo A InMidias UFG</title>
 
     <!-- CSS -->
-      <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
-      <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/b337/bootstrap.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/b337/bootstrap.min.css" type="text/css" media="screen" />
+       <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/contraste.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/docs.css" type="text/css" media="screen" />
@@ -47,7 +48,8 @@
     <!-- JS -->
       <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript" src="js/jquery.cookie.js"></script>    
-      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <script type="text/javascript" src="js/b337/bootstrap.js"></script>
+
       <script type="text/javascript" src="js/jquery.hotkeys-1.4.2.min.js"></script>
       <script type="text/javascript" src="js/acessibilidade.js"></script>  
       <script src="development/source/artyom.js"></script>
@@ -73,9 +75,7 @@
     
     <!-- barra de acessibilidade -->
     <div id="panel">
-      <div class="navbar navbar-inverse navbar-fixed-top" id="advanced" style="margin-top: 0px; position: relative; ">
-
-
+      <a id="menu_ref"  href="#menu_ref" class="menu_access_ref">In&iacute;cio do Menu</a>
         <div id="font-acess" style="z-index:1000">
             <button id="aMais" onclick="mudaFonte('mais'); return false" title="Aumentar Fonte">A+</button>
             <button id="aMenos2" onclick="mudaFonte('normal'); return false" title="Fonte normal">A</button>
@@ -87,84 +87,73 @@
             <a accesskey="5" href="#" id="contraste" title="Contraste">5</a>
             <a accesskey="6" href="mapa-do-site.html" id="link-rodape" title="Mapa do Site">6</a>
 	      </div>
-      </div>
     </div> 
 
     <!-- header -->
-    <header>
-      <div class="container clearfix">
-        <a id="menu_ref"  href="#menu_ref"></a>
-        <div class="row">
-          <div class="span12">
-            <div class="navbar navbar_">
-              <div class="container">
-                <!-- Logo -->
-                <h1 class="brand brand_">
-                  <a href="#">
-                    <img src="img/logo-branco.jpg"   width="220" height="220" alt="PAV - Projeto de Acessibilidade Virtual" />
-                  </a>
-                </h1>
+<header>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="img/logo-branco.jpg"   width="30" height="30" alt="PAV - Projeto de Acessibilidade Virtual" />
+      </a>
+    </div>
 
-                <!-- Menu -->
-                <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span></a>
-                
-                <div class="nav-collapse nav-collapse_  collapse">
-                  <a class="menu_access_ref">In&iacute;cio do Menu</a>
-                  <ul class="nav sf-menu">
-                    <li><a href="index.html" class="selected">Página Inicial</a></li>
-                    <li><a href="quem-somos.html">Quem-somos</a></li>
-                    <li><a href="noticias.html">Notícias</a></li>
-                    <li><a href="manuais.html">Manuais</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="publicacoes.html">Publicações</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                  </ul>
-                  <a id="finaldomenu" href="#finaldomenu" class="menu_access_ref">Final do Menu</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </header>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li class="active"><a href="index.html" class="selected">Página Inicial</a></li>
+         <li><a href="quem-somos.html">Quem Somos</a></li>
+         <li><a href="noticias.html">Notícias</a></li>
+         <li><a href="manuais.html">Manuais</a></li>
+         <li><a href="cursos.html">Cursos</a></li>
+         <li><a href="projetos.html">Projetos</a></li>
+         <li><a href="publicacoes.html">Publicações</a></li>
+         <li><a href="contato.html">Contato</a></li>
+      </ul>
+       <a id="finaldomenu" href="#finaldomenu" class="menu_access_ref">Final do Menu</a>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
 
 
-    <div class="bg-content" id="txt_home">
+    <div class="bg-content" id="txt_home">      
       
       <!-- Topo -->
-      <div class="container">
+      <div class="container slider_top">
         <div class="row">
           <div class="span12"> 
-            <img src="img/topo-art.png" class="topo_art" alt="" />
+            <img src="img/topo-art.png" class="topo_art" alt="" height="400" />
           </div>
         </div>
       </div>
       
       <!-- content -->
       <a id="conteudo_ref" href="#conteudo_ref" class="menu_access_ref">In&iacute;cio do Conte&uacute;do</a>
-      <div id="content" class="content-extra">
-
-        <div class="ic"></div>
+      
         
-        <div class="row-1">
           <div class="container">
-            <div class="row">
-            
-              <!-- Noticias -->
+             <!-- Noticias -->
               <article class="span12">
                 <h2><a href="noticias.html">Últimas notícias</a></h2>
               </article>
+
+            <div class="row">
             
-              <ul class="thumbnails thumbnails-1">
-                <li class="span3">
-                  <div class="thumbnail thumbnail-1">
+              <div class="col-xs-12 col-md-3 col-sm-3">
+                <div class="thumbnail thumbnail-1">
                     <img  src="files/file-example-01.jpg" alt="" />
                     
                     <section> 
-                      <h3><a href="#">Titulo lorem ipsum dolor sit amet consep elit</a></h3>
+                      <h5><a href="#">Titulo lorem ipsum dolor sit amet consep elit</a></h5>
                       <div class="meta">
                         <time datetime="2012-11-09" class="date-1"><i class="icon-calendar"></i> 10.08.14</time>
                         <div class="name-author"><i class="icon-user"></i> Redação</div>
@@ -174,15 +163,15 @@
 
                       <p>Cartola a Pró-reitoria de Extensão do IFRS lança o livro “Soluções Acessíveis: experiências inclusivas no IFRS”</p>
                     </section>
-                  </div>
-                </li>
+                </div>       
+              </div>
+              <div class="col-xs-12 col-md-3 col-sm-3">
 
-                <li class="span3">
-                  <div class="thumbnail thumbnail-1">
+                <div class="thumbnail thumbnail-1">
                     <img  src="files/file-example-01.jpg" alt="" />
                     
                     <section> 
-                      <h3><a href="#">Titulo lorem ipsum dolor sit amet consep elit</a></h3>
+                      <h5><a href="#">Titulo lorem ipsum dolor sit amet consep elit</a></h5>
                       <div class="meta">
                         <time datetime="2012-11-09" class="date-1"><i class="icon-calendar"></i> 10.08.14</time>
                         <div class="name-author"><i class="icon-user"></i> Redação</div>
@@ -192,15 +181,15 @@
 
                       <p>Cartola a Pró-reitoria de Extensão do IFRS lança o livro “Soluções Acessíveis: experiências inclusivas no IFRS”</p>
                     </section>
-                  </div>
-                </li>
+                </div>    
 
-                <li class="span3">
-                  <div class="thumbnail thumbnail-1">
+              </div>
+              <div class="col-xs-12 col-md-3 col-sm-3">
+                 <div class="thumbnail thumbnail-1">
                     <img  src="files/file-example-01.jpg" alt="" />
                     
                     <section> 
-                      <h3><a href="#">Titulo lorem ipsum dolor sit amet consep elit</a></h3>
+                      <h5><a href="#">Titulo lorem ipsum dolor sit amet consep elit</a></h5>
                       <div class="meta">
                         <time datetime="2012-11-09" class="date-1"><i class="icon-calendar"></i> 10.08.14</time>
                         <div class="name-author"><i class="icon-user"></i> Redação</div>
@@ -210,15 +199,15 @@
 
                       <p>Cartola a Pró-reitoria de Extensão do IFRS lança o livro “Soluções Acessíveis: experiências inclusivas no IFRS”</p>
                     </section>
-                  </div>
-                </li>
+                </div>    
 
-                <li class="span3">
-                  <div class="thumbnail thumbnail-1">
+              </div>
+              <div class="col-xs-12 col-md-3 col-sm-3">
+                 <div class="thumbnail thumbnail-1">
                     <img  src="files/file-example-01.jpg" alt="" />
-                  
+                    
                     <section> 
-                      <h3><a href="#">Titulo lorem ipsum dolor sit amet consep elit</a></h3>
+                      <h5><a href="#">Titulo lorem ipsum dolor sit amet consep elit</a></h5>
                       <div class="meta">
                         <time datetime="2012-11-09" class="date-1"><i class="icon-calendar"></i> 10.08.14</time>
                         <div class="name-author"><i class="icon-user"></i> Redação</div>
@@ -228,13 +217,14 @@
 
                       <p>Cartola a Pró-reitoria de Extensão do IFRS lança o livro “Soluções Acessíveis: experiências inclusivas no IFRS”</p>
                     </section>
-                  </div>
-                </li>
-              </ul>
-
+                </div>    
+              </div>
             </div>
-          </div>
         </div>
+
+
+
+
 
         <!-- Download Site -->
         <div class="row-2">
@@ -245,28 +235,31 @@
           </div>
         </div>
 
-        <div class="row-1 espaco">
+
           <div class="container">
             <div class="row">
-              
+                <div class="col-xs-12 col-md-4 col-sm-4">
               <!-- Projetos -->
               <article class="span4">
                 <h3><a href="projetos.html">Projetos</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris et elit sodales.</p>
                 <ul class="projetos">
                   <li>
+                    <i class="fa fa-cogs fa-2x"></i>
                     <a href="#">
                       Desenvolvendo sites acessiveis - Manual do desenvolvedor
                       <span>Cartola lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </a>
                   </li> 
                   <li>
+                     <i class="fa fa-cogs fa-2x"></i>
                     <a href="#">
                       Desenvolvendo sites acessiveis - Manual do desenvolvedor
                       <span>Cartola lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </a>
                   </li> 
                   <li>
+                     <i class="fa fa-cogs fa-2x"></i>
                     <a href="#">
                       Desenvolvendo sites acessiveis - Manual do desenvolvedor
                       <span>Cartola lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -274,25 +267,30 @@
                   </li> 
                 </ul>
               </article>
-
+            </div>
+              
+              <div class="col-xs-12 col-md-4 col-sm-4">
               <!-- Manuais -->
               <article class="span4">
                 <h3><a href="manuais.html">Manuais</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris et elit sodales.</p>
                 <ul class="manuais">
                   <li>
+                     <i class="fa fa-file fa-2x"></i>
                     <a href="#">
                       Desenvolvendo sites acessiveis - Manual do desenvolvedor
                       <span>Cartola lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </a>
                   </li> 
                   <li>
+                    <i class="fa fa-file fa-2x"></i>
                     <a href="#">
                       Desenvolvendo sites acessiveis - Manual do desenvolvedor
                       <span>Cartola lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </a>
                   </li> 
                   <li>
+                    <i class="fa fa-file fa-2x"></i>
                     <a href="#">
                       Desenvolvendo sites acessiveis - Manual do desenvolvedor
                       <span>Cartola lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -300,25 +298,30 @@
                   </li> 
                 </ul>
               </article>
+              </div>
 
+              <div class="col-xs-12 col-md-4 col-sm-4">
               <!-- Publicações -->
               <article class="span4">
                 <h3><a href="publicacoes.html">Publicações</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris et elit sodales.</p>
                 <ul class="manuais">
                   <li>
+                    <i class="fa fa-file fa-2x"></i>
                     <a href="#">
                       Desenvolvendo sites acessiveis - Manual do desenvolvedor
                       <span>Cartola lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </a>
                   </li> 
                   <li>
+                    <i class="fa fa-file fa-2x"></i>
                     <a href="#">
                       Desenvolvendo sites acessiveis - Manual do desenvolvedor
                       <span>Cartola lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </a>
                   </li> 
                   <li>
+                    <i class="fa fa-file fa-2x"></i>
                     <a href="#">
                       Desenvolvendo sites acessiveis - Manual do desenvolvedor
                       <span>Cartola lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -326,17 +329,18 @@
                   </li> 
                 </ul>
               </article>
-      
+              </div>
               <div class="clear"></div>
          
-            </div>
+      
           </div>
         </div>
 
         <!-- Rodape -->
-        <div class="container rodape">
+        <div class="container">
           <div class="row">
          
+          <div class="col-xs-12 col-md-6 col-sm-6">
             <!-- Encpntrenos -->
             <article class="span6">
               <h3>Encontre-nos</h3>
@@ -347,7 +351,8 @@
                 </div>
               </div>
             </article>
-
+          </div>
+           <div class="col-xs-12 col-md-4 col-sm-4">
             <!-- Banners -->
             <article class="span6">
               <ul class="banners">
@@ -356,9 +361,11 @@
                 <li><a href="#"><img src="img/banner-03.png" alt="Siga nossas Redes Sociais" /></a></li>
               </ul>
             </article>
+           </div>
           </div>
         </div>
       </div>
+
       <a id="finalconteudo_ref" href="#finalconteudo_ref" class="menu_access_ref">Final do Conte&uacute;do</a>
      
      <a class="botaotopo" href="#menu_ref" title="Ir Para o topo !">

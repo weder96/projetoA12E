@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Playing a local video</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 <style>
 html, body {
 	background: black;
@@ -149,11 +150,18 @@ function videosub_main() {
 <body>
 
 <video controls>
-<source src="file://C:\Users\weder\Desktop\gpbl\play.mp4" type="video/mp4">
+<source src="video/play.mp4" type="video/mp4">
 <!-- Chrome does not allow reading subtitle files from file:// -->
 <!--track label="English" kind="subtitles" srclang="en" src="Your local subtitle cannot be loaded.vtt" default-->
 </video>
-
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/jquery.cookie.js"></script>    
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <script type="text/javascript" src="js/jquery.hotkeys-1.4.2.min.js"></script>
+      <script type="text/javascript" src="js/acessibilidade.js"></script>  
+      <script src="development/source/artyom.js"></script>
+      <script src="development/source/artyomCommands.js"></script>
+      <script src="development/source/sandbox-scripts.js"></script>  
 <script type="text/srt" id="subtitle">
 1
 00:00:02,500 --> 00:00:05,250
