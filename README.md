@@ -25,6 +25,27 @@ O Mesmo se Baseia em:
 Project A11y site: http://a11yproject.com
 pagina 100% em Ingles
 
+Centro Tecnologico de Acessibilidade
+http://cta.ifrs.edu.br/
 
-Licença
-GPL
+Versao 1.0
+Inclusao de Barra lateral com:
+aumentar fonte
+diminuir fonte
+voltar ao normal
+Ir para o meu
+Ir para o Conteudo
+Ir para o Rodape
+Acessibilidade
+Constraste
+Mapa do Site
+
+Inclusao de Nova Versao do Boostrap da versao 2 para 3.3.7.
+Inclusao de biblioteca Javascript de Comando de Voz Artyom 1.0.5
+https://github.com/sdkcarlos/artyom.js/
+
+Demarcacao de comando entendiveis e acoes do javascript para controle da barra 
+lateral de Acessibilidade.
+
+
+Licença GPL - Porem a outros tecnologias que poderam ter licencas diferentes desta, assim a mesma segue suas licencas especificadas pelo criadores das mesmas.
