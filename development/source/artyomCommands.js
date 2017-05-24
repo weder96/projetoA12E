@@ -20,7 +20,7 @@
     var artyomCommands = [
         //Simple Command Example
         {
-            indexes: ['Olá'],
+            indexes: ['olá'],
             action : function(i){
                 artyom.say("Ola, Meu nome e Midiativo.",{
                     onStart: function(){
@@ -31,14 +31,17 @@
                     }
                 });
             }
-        },
-        //Smart Command Example
-        {
-            indexes: ['pronunciate * please'],
-            smart:true,
-            action : function(i,wildcard,recognized_text){
-                console.log("Recognized : " + recognized_text,"Wildcard : "+wildcard);
-                artyom.say(wildcard);
+        }, {
+            indexes: ['significado'],
+            action : function(i){
+               artyom.say("De acordo com o W3C World Wide Web Consortium, Acessibilidade na Web significa garantir que todas as pessoas, incluindo pessoas com deficiência, possam utilizar a Web. Mais especificamente, significa permitir que pessoas com deficiência consigam perceber, compreender, navegar, interagir e contribuir com a Web. Uma Web acessível beneficia a todos, incluindo pessoas idosas, pessoas com pouca habilidade em utilizar a Web, aqueles com uma conexão mais lenta, entre outros.",{
+                    onStart: function(){
+                        console.log("Speaking presentation");
+                    },
+                    onEnd: function(){
+                        console.log("All that i've to say has been said.");
+                    }
+                });
             }
         },
         //Continue adding your own commands here
@@ -65,22 +68,6 @@
                         selecionaContraste(); 
                           console.log("acender");
                          return false;
-                    },
-                    onEnd: function(){
-                        console.log("All that i've to say has been said.");
-                    }
-                });
-            }
-        }
-        ,
-         //Continue adding your own commands here
-        {
-          indexes: ['topo'],
-            action : function(i){
-                artyom.say("topo",{
-                    onStart: function(){
-                       // alert('topo');
-                        console.log("topo");
                     },
                     onEnd: function(){
                         console.log("All that i've to say has been said.");
@@ -124,7 +111,7 @@
 
     artyom.on(['rodapé']).then(function(i){
         artyom.say("rodapé");
-         alert('rodapé');
+         //alert('rodapé');
           window.location.assign("#rodape_ref");
         return false;
     });
@@ -194,18 +181,5 @@ artyom.on(['projetos']).then(function(i){
            window.location.assign("contato.html")   
              return false;
     });
-    artyom.on(['Clean the panel']).then(() => {
-        $("#log-panel").empty();
-    });
-
-   // artyom.on(['Repeat after me *'] , true).then(function(i, wildcard){
-     //   artyom.say(wildcard);
-    //});
-
-    // Matches "regular expressions" case insensitive
-   // artyom.on([/regular expressions/i], true).then(function(){
-     //   artyom.say("The usage of regular expressions is allowed in the smart commands");
-   // });
-
     console.log(artyom.getAvailableCommands());
 })(window);

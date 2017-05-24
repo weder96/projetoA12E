@@ -209,11 +209,6 @@ p.breadCrumb a:hover {
 }
 
 /* ----- topo --------*/
-.topo_art.img{
-  margin: 50 auto;
-  position: relative;
-  z-index: 1 !important;
-}
 
 .interno{
   background-color: #EEE;
@@ -1601,6 +1596,16 @@ footer {
 /*-----------------------------------------------*/
 .slider_top{
   max-height: 350px;
+}
+
+.topo_art{
+  margin-top: 30px;
+  margin-left: 70px;
+}
+
+.topo_logo{
+  margin-top: 70px;
+   margin-left: 70px;
 }
 
 .container_right{
