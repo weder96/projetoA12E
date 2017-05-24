@@ -28,24 +28,25 @@ pagina 100% em Ingles
 Centro Tecnologico de Acessibilidade
 http://cta.ifrs.edu.br/
 
-Versao 1.0
-Inclusao de Barra lateral com:
-aumentar fonte
-diminuir fonte
-voltar ao normal
-Ir para o meu
-Ir para o Conteudo
-Ir para o Rodape
-Acessibilidade
-Constraste
-Mapa do Site
+Versao 1.0:<br/>
+Inclusao de Barra lateral com:<br/>
+aumentar fonte<br/>
+diminuir fonte<br/>
+voltar ao normal<br/>
+Ir para o menu<br/>
+Ir para o Conteudo<br/>
+Ir para o Rodape<br/>
+Acessibilidade<br/>
+Constraste<br/>
+Mapa do Site<br/>
 
 Inclusao de Nova Versao do Boostrap da versao 2 para 3.3.7.
 Inclusao de biblioteca Javascript de Comando de Voz Artyom 1.0.5
 https://github.com/sdkcarlos/artyom.js/
 
-Demarcacao de comando entendiveis e acoes do javascript para controle da barra 
+Demarcacao de comando entendiveis e acoes do javascript para controle da barra, 
 lateral de Acessibilidade.
 
+Inclusao do fontawesome 4.7 com icons.
 
 Licença GPL - Porem a outros tecnologias que poderam ter licencas diferentes desta, assim a mesma segue suas licencas especificadas pelo criadores das mesmas.
