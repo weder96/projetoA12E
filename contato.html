@@ -4,8 +4,8 @@
   
   <head>
 
-    <!-- META -->
- <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <!-- META -->
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
       <meta name="DC.title" content="Site Modelo - Acessibilidade Virtual" />
       <meta name="DC.creator" content="Projeto de Acessibilidade Virtual" />
@@ -22,37 +22,47 @@
       <meta name="copyright" content="" />
       <meta name="doc-rights" content="Public" />
 
-      <meta name="geo.region" content="RS"/>
-      <meta name="geo.placename" content="Bento Gon&ccedil;alves" />
+      <meta name="geo.region" content="GO"/>
+      <meta name="geo.placename" content="Anápolis" />
       <meta name="distribution" content="Global" />
       <meta name="revisit-after" content="7 day" />
       <meta name="keywords" content="Acessibilidade, Portal Modelo, Site Modelo, e-MAG, PAV, Acessibilidade Virtual, Acessibilidade Web, Tecnologia Assistiva, Pedagógico, Manuais, Projetos, IFRS, IFCE, IFBAIANO" />
       <meta name="keywords" content="Acesibilidade immidias projetoA12e" />
 
     <!-- TITLE -->
-<link rel="shortcut icon" href="images/favicon.ico" type="img/x-icon" />
+      <link rel="shortcut icon" href="images/favicon.ico" type="img/x-icon" />
       <title>Site Modelo - Grupo A InMidias UFG</title>
 
     <!-- CSS -->
-      <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
-      <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/b337/bootstrap.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/b337/bootstrap.min.css" type="text/css" media="screen" />
+       <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/contraste.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/docs.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="css/bar_left_acessibility.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css_font/font-awesome.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css_font/font-awesome.min.css" type="text/css" media="screen" />
       <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300'  type='text/css' media="screen" />
 
     <!-- JS -->
       <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript" src="js/jquery.cookie.js"></script>    
-      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <script type="text/javascript" src="js/b337/bootstrap.js"></script>
+
       <script type="text/javascript" src="js/jquery.hotkeys-1.4.2.min.js"></script>
-      <script type="text/javascript" src="js/acessibilidade.js"></script>
+      <script type="text/javascript" src="js/acessibilidade.js"></script>  
+      <script src="development/source/artyom.js"></script>
+      <script src="development/source/artyomCommands.js"></script>
+      <script src="development/source/sandbox-scripts.js"></script>    
 
-    <!--[if (gt IE 9)|!(IE)]><!-->
-    <!--<![endif]-->
 
-    <!--[if lt IE 9]>
+
+
+  	<!--[if (gt IE 9)|!(IE)]><!-->
+  	<!--<![endif]-->
+
+  	<!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <link rel="stylesheet" href="css/docs.css" type="text/css" media="screen">
       <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
@@ -62,64 +72,57 @@
   </head>
   
   <body>
+    
     <!-- barra de acessibilidade -->
     <div id="panel">
-      <div class="navbar navbar-inverse navbar-fixed-top" id="advanced" style="margin-top: 0px; position: relative; ">
-
-
+      <a id="menu_ref"  href="#menu_ref" class="menu_access_ref">In&iacute;cio do Menu</a>
         <div id="font-acess" style="z-index:1000">
             <button id="aMais" onclick="mudaFonte('mais'); return false" title="Aumentar Fonte">A+</button>
             <button id="aMenos2" onclick="mudaFonte('normal'); return false" title="Fonte normal">A</button>
             <button id="aMenos3" onclick="mudaFonte('menos'); return false" title="Diminuir Fonte">A-</button>           
             <a accesskey="1" href="#conteudo_ref" id="link-conteudo" title="Ir para o conteúdo">1</a>
             <a accesskey="2" href="#menu_ref" id="link-navegacao" title="Ir para o menu">2</a>
-            <a accesskey="3" href="#afooter" id="link-rodape" title="Ir para o rodapé">3</a>
+            <a accesskey="3" href="#rodape_ref" id="link-rodape" title="Ir para o rodapé">3</a>
             <a accesskey="4" href="acessibilidade.html" id="link-rodape" title="Ir para acessibilidade">4</a>
             <a accesskey="5" href="#" id="contraste" title="Contraste">5</a>
             <a accesskey="6" href="mapa-do-site.html" id="link-rodape" title="Mapa do Site">6</a>
 	      </div>
-      </div>
     </div> 
 
     <!-- header -->
-    <header>
-      <div class="container clearfix">
-        <div class="row">
-          <div class="span12">
-            <div class="navbar navbar_">
-              <div class="container menor">
+<header>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="img/logo-branco.jpg"   width="30" height="30" alt="PAV - Projeto de Acessibilidade Virtual" />
+      </a>
+    </div>
 
-                <!-- Logo -->
-                <h1 class="">
-                  <a href="#">
-                    <img src="img/logo-preto.png" alt="PAV - Projeto de Acessibilidade Virtual" />
-                  </a>
-                </h1>
-
-                <!-- Menu -->
-                <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span></a>
-                
-                <div class="nav-collapse nav-collapse_  collapse">
-                  <a id="menu_ref"  href="#menu_ref" class="menu_access_ref">In&iacute;cio do Menu</a>
-                  <ul class="nav sf-menu">
-                    <li><a href="index.html">Página Inicial</a></li>
-                    <li><a href="quem-somos.html">Quem-somos</a></li>
-                    <li><a href="noticias.html">Notícias</a></li>
-                    <li><a href="manuais.html">Manuais</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="publicacoes.html">Publicações</a></li>
-                    <li><a href="contato.html" class="selected">Contato</a></li>
-                  </ul>
-                  <a id="finaldomenu" href="#finaldomenu" class="menu_access_ref">Final do Menu</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li class="active"><a href="index.html" class="selected">Página Inicial</a></li>
+         <li><a href="quem-somos.html">Quem Somos</a></li>
+         <li><a href="noticias.html">Notícias</a></li>
+         <li><a href="manuais.html">Manuais</a></li>
+         <li><a href="cursos.html">Cursos</a></li>
+         <li><a href="projetos.html">Projetos</a></li>
+         <li><a href="publicacoes.html">Publicações</a></li>
+         <li><a href="contato.html">Contato</a></li>
+      </ul>
+       <a id="finaldomenu" href="#finaldomenu" class="menu_access_ref">Final do Menu</a>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
 
     <div class="bg-content" id="txt_home"> 
   
@@ -127,38 +130,47 @@
       <a id="conteudo_ref" href="#conteudo_ref" class="menu_access_ref">In&iacute;cio do Conte&uacute;do</a>
       <div id="content">
         
-        <!-- Topo -->
-        <div class=" interno">
-          <div class="center">
-            <div class="block-slogan">
-              <h2>Contato</h2>
-            </div>
+       <div class="interno">
+            <div class="row">
+                <div class="col-md-6 container_right"><img src="img/logo-branco.jpg"   width="90" height="90" alt="Projeto A12El" /></div>
+                <div class="col-md-6"> <h2>| Contato</h2> </div>
           </div>
         </div>
+        
+
+              <ol class="breadcrumb">
+                Você está em: 
+              <li><a href="index.html" title="Voltar á Página inicial">Página Inicial</a></li>
+              <li class="active">Contato</li>
+              </ol>
+        
 
         <div class="ic"></div>
     
         <div class="container cinterno">
           <div class="row">
             
-            <article class="span8">
-              <p class="breadCrumb">Você está em: <a title="Voltar á Página inicial" href="#">Página inicial</a> / Contato</p>
-
+            <article class="span8_2">
               <h3>Formulário de contato</h3>
               
               <div class="inner-1">
                 <form id="contact-form">                  
       
+                <div class="col-xs-12 col-md-12 col-sm-12">
                     <label for="nome" class="name">
                       Seu nome:<br />
                       <input type="text" id="nome" required />
                     </label>
-    
+                </div>
+
+                <div class="col-xs-12 col-md-12 col-sm-12">
                     <label for="email" class="email">
                       Seu e-mail:<br />
                       <input type="email" id="email" required />
                     </label>
+                </div>
 
+                <div class="col-xs-12 col-md-12 col-sm-12">
                     <label for="message" class="message">
                       Mensagem:<br />
                       <textarea id="message" required></textarea>
@@ -166,7 +178,7 @@
                        
                     <input type="submit" class="btn btn-1 send" value="Enviar" />
                     <input type="reset" class="btn btn-1" value="Limpar campos" /> 
-        
+                </div>
                 </form>
               </div>
             </article>
@@ -174,18 +186,13 @@
             <article class="span4">
               <h3>Endereço</h3>
               
-              <h4>Bento Gonçalves</h4>
+              <h4>Grupo a midiativos Anápolis</h4>
               <address class="address-1">
                 
-                <strong>
-                  IFRS - Campus Bento Gonçalves,<br>
-                  Avenida Osvaldo Aranha, 540, Bairro Juventude na Enologia<br>
-                  Bento Gonçalves, RS – CEP: 95700-000
-                </strong>
 
                 <p class="overflow"> 
                   <span>Telefone:</span>+54 3455.3261<br>
-                  <span>E-mail:</span> <a href="#" class="mail-1">nav@ifrs.edu.br</a>
+                  <span>E-mail:</span> <a href="#" class="mail-1">nossoemail@gmaiil.com</a>
                 </p>
               </address>
             </article> 
@@ -195,7 +202,12 @@
       </div>
       <a id="finalconteudo_ref" href="#finalconteudo_ref" class="menu_access_ref">Final do Conte&uacute;do</a>
 
-      <a href="#menu_ref" class="bt_voltar_topo">Voltar ao topo</a>
+          <a class="botaotopo" href="#menu_ref" title="Ir Para o topo !">
+					<div id="move-to-top" class="animate filling">
+            <i class="fa fa-angle-double-up fa-2x"></i>
+         </div>
+	  	</a>
+
     </div>
 
     <!-- footer -->
@@ -211,7 +223,7 @@
           <li><a class="icon-4" href="#">Siga-nos no Google+</a></li>
         </ul>
         
-        <div class="privacy pull-left">Desenvolvido pelo Projeto de Acessibilidade Virtual</div>
+        <div class="privacy pull-left">Desenvolvido pelo Projeto A12E</div>
       </div>
     </footer>
     <a href="#finalrodape_ref" id="finalrodape_ref" class="menu_access_ref">Final do Rodap&eacute;</a>

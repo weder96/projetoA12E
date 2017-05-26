@@ -840,7 +840,7 @@ p {
   min-height: 40px;
   position: relative;
   margin: 0;
-  color: #fff;
+  color: #000;
   font-size: 1.3em;
 }
 #contact-form .message {
@@ -1599,6 +1599,27 @@ footer {
 /*-----------------------------------------------*/
 .slider_top{
   max-height: 350px;
+}
+
+.span12_2 h3{
+  color: #337ab7 !important;
+}
+
+
+.span8_2 h3{
+  color: #337ab7 !important;
+}
+
+.span4 {
+  color: #000000 !important;
+}
+
+.overflow{
+ color: #000000 !important;
+}
+
+.overflow a{
+ color: #000000 !important;
 }
 
 .topo_art{
